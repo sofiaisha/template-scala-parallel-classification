@@ -501,7 +501,7 @@ class Query(
   val Col559 : Double,
   val Col560 : Double,
   val Col561 : Double,
-  val Col562 : Double,
+  val Col562 : Double
 ) extends Serializable
 
 class PredictedResult(
