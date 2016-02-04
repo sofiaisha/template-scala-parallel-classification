@@ -32,7 +32,7 @@ class NaiveBayesAlgorithm(val ap: AlgorithmParams)
 
   def predict(model: NaiveBayesModel, query: Query): PredictedResult = {
     val label = model.predict(Vectors.dense(
-      Array(query.attr0, query.attr1, query.attr2)
+      for (i <- List.range(0, 562)) yield classOf[Query].getDeclaredField("Col"+i).get(query).asInstanceOf(Double)
     ))
     new PredictedResult(label)
   }
